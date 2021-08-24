@@ -5,15 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hello 555</title>
+    <title>Check Device</title>
+
+    <style>
+        .demo {
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>hello</h1>
+    <div class="demo"></div>
 </body>
 
 <script>
-
+    const demo = document.querySelector('.demo');
     function iOS() {
         return [
             'iPad Simulator',
@@ -28,9 +35,11 @@
     }
 
     if (iOS()) {
-        alert('this is ios')
+        alert('Device is ios');
+        demo.innerHTML = 'Device is ios';
     } else {
-        alert('this is windows')
+        alert('Device is windows');
+        demo.innerHTML = 'Device is windows';
     }
 </script>
 
